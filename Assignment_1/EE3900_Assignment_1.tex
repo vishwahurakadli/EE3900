@@ -121,49 +121,66 @@ columns=fullflexible
      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \vspace{3cm}
-\title{ASSIGNMENT 2}
+\title{ASSIGNMENT 1}
 \author{Vishwanath Hurakadli\\ AI20BTECH11023}
 \maketitle
 \newpage
 \bigskip
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
-Download all python codes from
+Download all latex-tikz codes from 
 \begin{lstlisting}
-https://github.com/vishwahurakadli/EE3900/blob/main/Assignment_2/EE3900_Assignment_2.ipynb
-\end{lstlisting} 
-and latex-tikz codes from 
-\begin{lstlisting}
-https://github.com/vishwahurakadli/EE3900/blob/main/Assignment_2/EE3900_Assignment_2.tex
+https://github.com/vishwahurakadli/EE3900/blob/main/Assignment_1/Assignment_1.tex
 \end{lstlisting}
 %
 \section{Problem}
-(Matrix-2.52)\\
-If $\vec{A}=\myvec{-2\\4\\5}$ , $\vec{B}=\myvec{1&3&-6}$ , verify that\\
-$\brak{\vec{AB}}^{\top} = \vec{B}^{\top}\vec{A}^{\top}$
+(Vectors-2.20) If
+\begin{align}
+\vec{P} = 3\vec{a} - 2\vec{b}\\
+\vec{Q} = \vec{a} +\vec{b}
+\end{align}
+ find $\vec{R}$ which divides PQ in the ratio 2 : 1
+\begin{enumerate}
+    \item internally \label{option A}
+    \item externally \label{option B}
+\end{enumerate}
 \section{Solution}
-  
-Calculating transpose of matrix multiplication on LHS\\
-Matrix multiplication of AB is given by
+Vector $\vec{P}$ and $\vec{Q}$ can be represented using $\vec{a}$ and $\vec{b}$ as
 \begin{align}
-\vec{AB} &= \myvec{-2\\4\\5}\myvec{1&3&-6}\\
-\implies \vec{AB} &= \myvec{-2&-6&12\\4&12&-24\\5&15&-30}
+\vec{P} &= \myvec{3&-2}\myvec{\vec{a}\\\vec{b}} = 3\vec{a} - 2\vec{b}\\
+\vec{Q} &= \myvec{1&1}\myvec{\vec{a}\\\vec{b}} = \vec{a} +\vec{b}
 \end{align}
-As there is only one element in matrix AB and it is square matrix, therefore transpose of matrix AB is AB itself
+\begin{enumerate}
+\item 
+section formula for internal division for ratio m : n is given by 
 \begin{align}
-\brak{\vec{AB}}^{\top} &=  \myvec{-2&4&5\\-6&12&15\\12&-24&-30}
+\vec{I} &= \myvec{\frac{m}{m+n} & \frac{n}{m+n}}\myvec{\vec{P}\\\vec{Q}}\\
+&=  \frac{m\vec{P} + n\vec{Q}}{m + n}
 \end{align}
-Calculating multiplication of transpose of matrices\\
-Transpose of matrices 
+so for ratio 2 : 1 R will be given by
 \begin{align}
-\vec{A}^{\top} &= \myvec{-2&4&5} \\
-\vec{B}^{\top} &= \myvec{1\\3\\-6}
+\vec{R} &= \myvec{\frac{2}{2+1} & \frac{1}{2+1}}\myvec{\vec{P}\\\vec{Q}}\\
+&= \frac{2}{3}\vec{P} + \frac{1}{3}\vec{Q}\\
+&= \myvec{2 & -\frac{4}{3}}\myvec{\vec{a}\\\vec{b}} + 
+\myvec{\frac{1}{3} & \frac{1}{3}}\myvec{\vec{a}\\\vec{b}}\\
+&= \myvec{\frac{7}{3}&-1}\myvec{\vec{a}\\\vec{b}}\\
+\vec{R} &= \frac{7}{3}\vec{a} - \vec{b}
 \end{align}
-Now
+$\vec{R}$ will divide PQ internally\\
+\item similarly section formula for external division for ration m : n is given by
 \begin{align}
-\vec{B}^{\top}\vec{A}^{\top} &= \myvec{1\\3\\-6}\myvec{-2&4&5}\\
-\vec{B}^{\top}\vec{A}^{\top} &= \myvec{-2&4&5\\-6&12&15\\12&-24&-30}\\
-\vec{B}^{\top}\vec{A}^{\top} &= \brak{\vec{AB}}^{\top}
+\vec{E} &= \myvec{\frac{m}{m-n} & \frac{n}{m-n}}\myvec{\vec{P}\\\vec{Q}}\\
+&= \frac{m\vec{P} - n\vec{Q}}{m - n}
 \end{align}
-Therefore $\brak{\vec{AB}}^{\top} = \vec{B}^{\top}\vec{A}^{\top}$
+so for ratio 2 : 1 R will be given by
+\begin{align}
+\vec{R} &= \myvec{\frac{2}{2-1} & -\frac{1}{2-1}}\myvec{\vec{P}\\\vec{Q}}\\
+&= 2\vec{P} - \vec{Q}\\
+&= \myvec{6 & -4}\myvec{\vec{a}\\\vec{b}} + 
+\myvec{-1 & -1}\myvec{\vec{a}\\\vec{b}}\\
+&= \myvec{5&-5}\myvec{\vec{a}\\\vec{b}}\\
+\vec{R} &= 5\vec{a} - 5\vec{b}
+\end{align}
+$\vec{R}$ will divide PQ externally
+\end{enumerate}
 \end{document}
