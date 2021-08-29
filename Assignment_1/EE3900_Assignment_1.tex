@@ -147,25 +147,24 @@ https://github.com/vishwahurakadli/EE3900/blob/main/Assignment_1/Assignment_1.te
 \section{Solution}
 Vector $\vec{P}$ and $\vec{Q}$ can be represented using $\vec{a}$ and $\vec{b}$ as
 \begin{align}
-\vec{P} &= \myvec{3&-2}\myvec{\vec{a}\\\vec{b}} = 3\vec{a} - 2\vec{b}\\
-\vec{Q} &= \myvec{1&1}\myvec{\vec{a}\\\vec{b}} = \vec{a} +\vec{b}
+\vec{P} &= \myvec{3&-2}\myvec{\vec{a}\\\vec{b}}\\
+\vec{Q} &= \myvec{1&1}\myvec{\vec{a}\\\vec{b}}
 \end{align}
 $\myvec{\vec{P}\\\vec{Q}}$ in terms of $\vec{a}$ and $\vec{b}$ is given by
 \begin{align}
-\myvec{\vec{P}\\\vec{Q}} &= \myvec{3 & -2\\1 & 1}\myvec{\vec{a} \\ \vec{b}}\\
-&= \myvec{ 3\vec{a} - 2\vec{b} \\ \vec{a} +\vec{b}}
+\myvec{\vec{P}\\\vec{Q}} &= \myvec{3 & -2\\1 & 1}\myvec{\vec{a} \\ \vec{b}}
 \end{align}
 \begin{enumerate}
 \item 
 section formula for internal division for ratio m : n is given by 
 \begin{align}
 \vec{I} &= \myvec{\frac{m}{m+n} & \frac{n}{m+n}}\myvec{\vec{P}\\\vec{Q}}\\
-&= \myvec{\frac{m}{m+n} & \frac{n}{m+n}}\myvec{ 3\vec{a} - 2\vec{b} \\ \vec{a} +\vec{b}}\\
+&= \myvec{\frac{m}{m+n} & \frac{n}{m+n}}\myvec{3 & -2\\1 & 1}\myvec{\vec{a} \\ \vec{b}}
 \end{align}
 so for ratio 2 : 1 R will be given by
 \begin{align}
 \vec{R} &= \myvec{\frac{2}{2+1} & \frac{1}{2+1}}\myvec{\vec{P}\\\vec{Q}}\\
-&= \myvec{\frac{2}{3}&\frac{1}{3}}\myvec{ 3\vec{a} - 2\vec{b} \\ \vec{a} +\vec{b}}\\
+&= \myvec{\frac{2}{3}&\frac{1}{3}}\myvec{3 & -2\\1 & 1}\myvec{\vec{a} \\ \vec{b}}\\
 &= \frac{2}{3}\brak{3\vec{a} - 2\vec{b}} + \frac{1}{3}\brak{\vec{a} +\vec{b}}\\
 \vec{R} &= \frac{7}{3}\vec{a} - \vec{b}
 \end{align}
@@ -173,12 +172,12 @@ $\vec{R}$ will divide PQ internally\\
 \item similarly section formula for external division for ration m : n is given by
 \begin{align}
 \vec{E} &= \myvec{\frac{m}{m-n} & \frac{n}{m-n}}\myvec{\vec{P}\\\vec{Q}}\\
-&= \myvec{\frac{m}{m-n} & \frac{n}{m-n}}\myvec{3\vec{a} - 2\vec{b} \\ \vec{a} +\vec{b}}
+&= \myvec{\frac{m}{m-n} & \frac{n}{m-n}}\myvec{3 & -2\\1 & 1}\myvec{\vec{a} \\ \vec{b}}
 \end{align}
 so for ratio 2 : 1 R will be given by
 \begin{align}
 \vec{R} &= \myvec{\frac{2}{2-1} & -\frac{1}{2-1}}\myvec{\vec{P}\\\vec{Q}}\\
-&= \myvec{2 & -1}\myvec{3\vec{a} - 2\vec{b} \\ \vec{a} +\vec{b}}\\
+&= \myvec{2 & -1}\myvec{3 & -2\\1 & 1}\myvec{\vec{a} \\ \vec{b}}\\
 &= 2\brak{3\vec{a} - 2\vec{b}} - \brak{\vec{a} +\vec{b}}\\
 \vec{R} &= 5\vec{a} - 5\vec{b}
 \end{align}
